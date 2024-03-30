@@ -1,11 +1,15 @@
 {
-   "manifest_version": 3,
-   "name": "HealthyTurtle",
-   "description": "Base Level Extension",
-   "version": "1.0",
-   "action": {
-     "default_popup": "popup/popup.html",
-     "default_icon": "images/HealthyTurtle.png"
-   }
+  "manifest_version": 3,
+  "name": "HealthyTurtle",
+  "description": "Check food products ingredients to be as healthy as possible",
+  "version": "1.0",
+  "permissions": [
+    "storage"
+  ],
+  "options_page": "options/options.html",
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/HealthyTurtle.png"
+  }
 }
  
