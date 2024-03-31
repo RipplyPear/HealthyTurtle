@@ -6,9 +6,8 @@
   "permissions": [
     "storage"
   ],
-  "options_page": "options/options.html",
   "action": {
-    "default_popup": "popup/popup.html",
+    "default_popup": "source/popup.html",
     "default_icon": "images/HealthyTurtle.png"
   }
 }

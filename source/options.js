@@ -1,3 +1,10 @@
+// TODO: Create base object of objects with name, option, color
+// Use object for the storage methods
+userOptions = {
+   salt: {}, 
+};
+
+// TODO: Iterate over object attributes
 // Saves options to chrome.storage
 const saveOptions = () => {
    const color = document.getElementById('color').value;
@@ -10,12 +17,12 @@ const saveOptions = () => {
          const status = document.getElementById('status');
          status.textContent = 'Options saved.';
          setTimeout(() => {
-         status.textContent = '';
+            status.textContent = '';
          }, 750);
       }
    );
 };
- 
+
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 const restoreOptions = () => {
