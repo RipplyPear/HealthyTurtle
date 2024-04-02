@@ -4,11 +4,18 @@
   "description": "Check food products ingredients to be as healthy as possible",
   "version": "1.0",
   "permissions": [
-    "storage"
+    "storage", "activeTab", "scripting"
   ],
   "action": {
     "default_popup": "source/popup.html",
     "default_icon": "images/HealthyTurtle.png"
-  }
+  },
+  "content_scripts": [
+    {
+        "matches": ["*://*.freshful.ro/p/*"],
+        "js": ["source/script.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
 }
  
