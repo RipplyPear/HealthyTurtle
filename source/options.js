@@ -1,5 +1,4 @@
-// TODO: Create base object of objects with name, option, color
-// Use object for the storage methods
+// Object to store the user's options
 let userOptions = {
    salt: {
       label: "salt", option: "indifferent"
@@ -27,33 +26,35 @@ let userOptions = {
    }
 };
 
+// keys of userOptions
 let keys = Object.keys(userOptions);
-// console.log(userOptions[keys[2]].option);
 
-// Saves options to chrome.storage
+// Save options to chrome.storage
 const saveOptions = () => {
+   // For each object inside userOptions the user's choice gets memorised based on 
+   // the value of the dropdowns from popup.html
    for (let i = 0; i < keys.length; i++)
       userOptions[keys[i]].option = document.getElementById(userOptions[keys[i]].label).value;
    
    chrome.storage.sync.set(
-      //{ favoriteColor: color, likesColor: likesColor },
       userOptions,
       () => {
-         // Update status to let user know options were saved.
+         // Update status to let user know options were saved
          const status = document.getElementById('status');
          status.textContent = 'Options saved.';
          setTimeout(() => {
+            // Delete the notification
             status.textContent = '';
          }, 750);
       }
    );
 };
 
-// Restores select box and checkbox state using the preferences
+// Restores select box state using the options
 // stored in chrome.storage.
 const restoreOptions = () => {
    chrome.storage.sync.get(
-      // { favoriteColor: 'red', likesColor: true },
+      // Default values for the userOptions object
       {
          salt: {label: "salt", option: "indifferent"}, 
          sugar: {label: "sugar", option: "indifferent"}, 
@@ -66,13 +67,16 @@ const restoreOptions = () => {
       },
       (items) => {
          let itemsKeys = Object.keys(items);
-         userOptions = items;
-         // console.log(items);
+
+         // for each item in the object, restore the option in popup.html
          for (let i = 0; i < keys.length; i++)
             document.getElementById(items[itemsKeys[i]].label).value = items[itemsKeys[i]].option;
       }
    );
 };
 
+// Restore options as soon as the page has loaded
 document.addEventListener('DOMContentLoaded', restoreOptions);
+
+// Save options when the "Save" button is pressed by the user
 document.getElementById('save').addEventListener('click', saveOptions);
