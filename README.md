@@ -96,4 +96,4 @@ HealthyTurtle is an informational aid, not medical, nutritional, or allergy advi
 
 ### License
 
-The project is currently `UNLICENSED`. A public license will be selected once the icon and attribution status are finalized.
+HealthyTurtle source code is licensed under the [MIT License](LICENSE). Third-party assets, if added, retain their own licenses.
