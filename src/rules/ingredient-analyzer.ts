@@ -1,9 +1,9 @@
 import type { PreferenceId, PreferenceValue, Preferences } from '../shared/preferences';
+import { getPreferenceDefinition } from '../shared/preferences';
 import { normalizeIngredientText, tokenizeIngredientText } from './normalize';
 
 interface IngredientRule {
   preferenceId: PreferenceId;
-  label: string;
   terms: readonly string[];
   excludedPhrases?: readonly string[];
 }
@@ -18,44 +18,36 @@ export interface IngredientFinding {
 const ingredientRules: readonly IngredientRule[] = [
   {
     preferenceId: 'salt',
-    label: 'Salt',
     terms: ['sare', 'saruri'],
   },
   {
     preferenceId: 'sugar',
-    label: 'Sugar',
     terms: ['zahar', 'zaharuri', 'sirop de glucoza', 'sirop de fructoza'],
   },
   {
     preferenceId: 'gluten',
-    label: 'Gluten',
     terms: ['gluten'],
     excludedPhrases: ['fara gluten'],
   },
   {
     preferenceId: 'lactose',
-    label: 'Lactose',
     terms: ['lactoza'],
     excludedPhrases: ['fara lactoza'],
   },
   {
     preferenceId: 'eggs',
-    label: 'Eggs',
     terms: ['ou', 'oua', 'albus', 'galbenus'],
   },
   {
     preferenceId: 'fish',
-    label: 'Fish',
     terms: ['peste'],
   },
   {
     preferenceId: 'soy',
-    label: 'Soy',
     terms: ['soia', 'lecitina de soia'],
   },
   {
     preferenceId: 'nuts',
-    label: 'Nuts',
     terms: ['nuci', 'alune', 'migdale', 'arahide', 'fistic', 'caju'],
   },
 ];
@@ -97,7 +89,7 @@ export function analyzeIngredients(
       ? [
           {
             preferenceId: rule.preferenceId,
-            label: rule.label,
+            label: getPreferenceDefinition(rule.preferenceId).label,
             preference,
             matchedTerm: normalizeIngredientText(matchedTerm),
           },

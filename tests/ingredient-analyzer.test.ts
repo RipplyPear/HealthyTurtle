@@ -17,19 +17,19 @@ describe('analyzeIngredients', () => {
     expect(findings).toEqual([
       {
         preferenceId: 'salt',
-        label: 'Salt',
+        label: 'Sare',
         preference: 'reduce',
         matchedTerm: 'sare',
       },
       {
         preferenceId: 'sugar',
-        label: 'Sugar',
+        label: 'Zahăr',
         preference: 'avoid',
         matchedTerm: 'zahar',
       },
       {
         preferenceId: 'soy',
-        label: 'Soy',
+        label: 'Soia',
         preference: 'avoid',
         matchedTerm: 'lecitina de soia',
       },
@@ -63,13 +63,13 @@ describe('analyzeIngredients', () => {
     expect(findings).toEqual([
       {
         preferenceId: 'eggs',
-        label: 'Eggs',
+        label: 'Ouă',
         preference: 'avoid',
         matchedTerm: 'galbenus',
       },
       {
         preferenceId: 'fish',
-        label: 'Fish',
+        label: 'Pește',
         preference: 'reduce',
         matchedTerm: 'peste',
       },

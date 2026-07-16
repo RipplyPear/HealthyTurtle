@@ -1,25 +1,35 @@
 export const preferenceDefinitions = [
-  { id: 'salt', label: 'Salt', description: 'Sodium and salt-related terms' },
-  { id: 'sugar', label: 'Sugar', description: 'Added sugars and sugar-related terms' },
-  { id: 'gluten', label: 'Gluten', description: 'Gluten-containing ingredients' },
-  { id: 'lactose', label: 'Lactose', description: 'Lactose and dairy-related terms' },
-  { id: 'eggs', label: 'Eggs', description: 'Egg and egg-derived ingredients' },
-  { id: 'fish', label: 'Fish', description: 'Fish and fish-derived ingredients' },
-  { id: 'soy', label: 'Soy', description: 'Soy and soy-derived ingredients' },
-  { id: 'nuts', label: 'Nuts', description: 'Tree nuts and peanuts' },
+  { id: 'salt', label: 'Sare', description: 'Sare, sodiu și termeni asociați' },
+  { id: 'sugar', label: 'Zahăr', description: 'Zahăr și termeni asociați' },
+  { id: 'gluten', label: 'Gluten', description: 'Ingrediente care conțin gluten' },
+  { id: 'lactose', label: 'Lactoză', description: 'Lactoză și derivate din lapte' },
+  { id: 'eggs', label: 'Ouă', description: 'Ouă și ingrediente derivate' },
+  { id: 'fish', label: 'Pește', description: 'Pește și ingrediente derivate' },
+  { id: 'soy', label: 'Soia', description: 'Soia și ingrediente derivate' },
+  { id: 'nuts', label: 'Nuci și arahide', description: 'Nuci, arahide și derivate' },
 ] as const;
 
 export type PreferenceId = (typeof preferenceDefinitions)[number]['id'];
 export type PreferenceValue = 'ignore' | 'reduce' | 'avoid';
 export type Preferences = Record<PreferenceId, PreferenceValue>;
 
+export function getPreferenceDefinition(id: PreferenceId) {
+  const definition = preferenceDefinitions.find((preference) => preference.id === id);
+
+  if (!definition) {
+    throw new Error(`Unknown preference: ${id}`);
+  }
+
+  return definition;
+}
+
 export const preferenceChoices: ReadonlyArray<{
   value: PreferenceValue;
   label: string;
 }> = [
-  { value: 'ignore', label: 'Do not highlight' },
-  { value: 'reduce', label: 'Highlight for reduction' },
-  { value: 'avoid', label: 'Highlight to avoid' },
+  { value: 'ignore', label: 'Nu evidenția' },
+  { value: 'reduce', label: 'Marchează pentru reducere' },
+  { value: 'avoid', label: 'Marchează de evitat' },
 ];
 
 export const defaultPreferences: Preferences = {
