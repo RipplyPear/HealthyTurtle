@@ -97,3 +97,10 @@ HealthyTurtle is an informational aid, not medical, nutritional, or allergy advi
 ### License
 
 HealthyTurtle source code is licensed under the [MIT License](LICENSE). Third-party assets, if added, retain their own licenses.
+## Academic background
+
+The original student research paper is retained as historical project context:
+[HealthyTurtle scientific paper](docs/research/healthy-turtle-scientific-paper.pdf).
+
+It is a separate authors' work and is not covered by this repository's MIT
+license. See [the research archive notice](docs/research/README.md).
