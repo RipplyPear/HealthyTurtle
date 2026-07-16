@@ -89,7 +89,7 @@ HealthyTurtle is an informational aid, not medical, nutritional, or allergy advi
 
 ## Roadmap
 - [ ] Expand and document rule coverage
-- [ ] Add an original extension icon and choose an open-source license
+- [x] Add extension icon assets and choose an open-source license
 - [ ] Add end-to-end browser tests
 - [ ] Improve the popup visual design and accessibility
 - [ ] Consider English localization after the Romanian interface is stable
