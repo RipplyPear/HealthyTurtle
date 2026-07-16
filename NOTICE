@@ -1,0 +1,10 @@
+# Third-party assets
+
+## Lilyu's turtle
+
+- Source: https://commons.wikimedia.org/wiki/File:Lilyu%27s_turtle.svg
+- Author: Lilyu
+- License: WTFPL 2.0
+- Use: resized PNG icons for the HealthyTurtle Chrome extension.
+
+The original SVG is retained at `public/icons/lilyus-turtle.svg`.
