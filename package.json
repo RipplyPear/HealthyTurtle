@@ -1,0 +1,32 @@
+{
+  "name": "healthy-turtle",
+  "version": "2.0.0-alpha.0",
+  "description": "A privacy-first Chrome extension that highlights food-label information based on dietary preferences.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "coverage": "vitest run --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RipplyPear/HealthyTurtle.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "manifest-v3",
+    "nutrition",
+    "food-labels",
+    "typescript"
+  ],
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

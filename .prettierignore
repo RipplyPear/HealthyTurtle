@@ -1,0 +1,8 @@
+coverage/
+dist/
+dump/
+node_modules/
+source/
+images/
+manifest.json
+README.md
