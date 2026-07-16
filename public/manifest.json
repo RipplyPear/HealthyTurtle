@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "HealthyTurtle",
+  "version": "2.0.0",
+  "description": "Highlights food-label information based on dietary preferences.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "HealthyTurtle"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.freshful.ro/*"],
+      "js": ["content/main.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
