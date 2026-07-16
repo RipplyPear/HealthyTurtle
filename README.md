@@ -54,7 +54,11 @@ Food labels can be dense and difficult to scan quickly. HealthyTurtle is a small
 git clone https://github.com/RipplyPear/HealthyTurtle.git
 cd HealthyTurtle
 npm ci
-Quality checks
+```
+
+### Quality checks
+
+``` bash
 npm run format:check
 npm run typecheck
 npm run lint
