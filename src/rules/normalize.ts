@@ -6,3 +6,9 @@ export function normalizeIngredientText(value: string): string {
     .replace(/[^\p{L}\p{N}]+/gu, ' ')
     .trim();
 }
+
+export function tokenizeIngredientText(value: string): string[] {
+  const normalized = normalizeIngredientText(value);
+
+  return normalized === '' ? [] : normalized.split(' ');
+}
