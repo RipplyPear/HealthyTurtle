@@ -37,7 +37,7 @@ function renderPreferences(preferences: Preferences): void {
 
     const select = document.createElement('select');
     select.name = definition.id;
-    select.setAttribute('aria-label', `${definition.label} preference`);
+    select.setAttribute('aria-label', `Preferință pentru ${definition.label}`);
 
     for (const choice of preferenceChoices) {
       const option = document.createElement('option');
@@ -58,7 +58,7 @@ async function initialize(): Promise<void> {
   try {
     renderPreferences(await loadPreferences());
   } catch {
-    status.textContent = 'Preferences could not be loaded.';
+    status.textContent = 'Preferințele nu au putut fi încărcate.';
   }
 }
 
@@ -70,9 +70,9 @@ form.addEventListener('submit', async (event) => {
 
   try {
     await savePreferences(preferences);
-    status.textContent = 'Preferences saved.';
+    status.textContent = 'Preferințele au fost salvate.';
   } catch {
-    status.textContent = 'Preferences could not be saved.';
+    status.textContent = 'Preferințele nu au putut fi salvate.';
   }
 });
 

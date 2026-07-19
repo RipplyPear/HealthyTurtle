@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "HealthyTurtle",
   "version": "2.0.0",
-  "description": "Highlights food-label information based on dietary preferences.",
+  "description": "Evidențiază informațiile de pe etichetele alimentare în funcție de preferințele tale.",
   "permissions": [
     "storage"
   ],

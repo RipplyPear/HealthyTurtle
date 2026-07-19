@@ -78,7 +78,7 @@ npm run build
 
 After changing code, rebuild and click the refresh button for the extension on `chrome://extensions`.
 
-### Privacy
+## Privacy
 - The extension runs only on `freshful.ro`.
 - Preferences are stored with `chrome.storage.sync`.
 - Ingredient text is analyzed locally in the browser.
@@ -100,9 +100,10 @@ HealthyTurtle is an informational aid, not medical, nutritional, or allergy advi
 - [ ] Improve the popup visual design and accessibility
 - [ ] Consider English localization after the Romanian interface is stable
 
-### License
+## License
 
 HealthyTurtle source code is licensed under the [MIT License](LICENSE). Third-party assets, if added, retain their own licenses.
+
 ## Academic background
 
 The original student research paper is retained as historical project context:
