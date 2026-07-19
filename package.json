@@ -1,6 +1,6 @@
 {
   "name": "healthy-turtle",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0",
   "description": "A privacy-first Chrome extension that highlights food-label information based on dietary preferences.",
   "private": true,
   "type": "module",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RipplyPear/HealthyTurtle.git"
+    "url": "git+https://github.com/RipplyPear/healthy-turtle.git"
   },
   "keywords": [
     "chrome-extension",

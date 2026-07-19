@@ -4,7 +4,7 @@
 
 A privacy-first Chrome extension that helps users review food ingredient lists on Freshful according to personal dietary preferences.
 
-Originally built as a student scientific-communication project, HealthyTurtle is being rebuilt as a maintainable Manifest V3 extension with TypeScript, automated tests, and a transparent rule-based analysis flow.
+Originally built as a student scientific-communication project, HealthyTurtle is now a maintainable Manifest V3 extension built with TypeScript, automated tests, and a transparent rule-based analysis flow.
 
 ![HealthyTurtle ingredient insights on Freshful](docs/ingredients-card.png)
 
@@ -53,8 +53,8 @@ Food labels can be dense and difficult to scan quickly. HealthyTurtle is a small
 - Google Chrome or another Chromium-based browser
 
 ```bash
-git clone https://github.com/RipplyPear/HealthyTurtle.git
-cd HealthyTurtle
+git clone https://github.com/RipplyPear/healthy-turtle.git
+cd healthy-turtle
 npm ci
 ```
 
