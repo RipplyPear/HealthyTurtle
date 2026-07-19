@@ -28,8 +28,8 @@ export const preferenceChoices: ReadonlyArray<{
   label: string;
 }> = [
   { value: 'ignore', label: 'Nu evidenția' },
-  { value: 'reduce', label: 'Marchează pentru reducere' },
-  { value: 'avoid', label: 'Marchează de evitat' },
+  { value: 'reduce', label: 'De redus' },
+  { value: 'avoid', label: 'De evitat' },
 ];
 
 export const defaultPreferences: Preferences = {

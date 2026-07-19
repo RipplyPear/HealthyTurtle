@@ -17,6 +17,16 @@ Originally built as a student scientific-communication project, HealthyTurtle is
 
 The extension does not rewrite or hide Freshful's product content.
 
+### Preference controls
+
+<p align="center">
+  <img
+    src="docs/preferences-popup.png"
+    alt="HealthyTurtle popup showing dietary preference controls"
+    width="360"
+  >
+</p>
+
 ## Why this project
 
 Food labels can be dense and difficult to scan quickly. HealthyTurtle is a small, transparent assistive layer: it surfaces terms a user has already chosen to watch for, while keeping the original product label visible.
