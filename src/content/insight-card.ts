@@ -56,7 +56,7 @@ export function renderInsightCard(panel: HTMLElement, findings: IngredientFindin
       action.textContent = finding.preference === 'avoid' ? 'De evitat' : 'De redus';
 
       const detail = document.createElement('span');
-      detail.textContent = `${finding.label} — termen detectat: „${finding.matchedTerm}”`;
+      detail.textContent = `${finding.label} - termen detectat: „${finding.matchedTerm}”`;
 
       item.append(action, detail);
       list.append(item);
@@ -70,7 +70,7 @@ export function renderInsightCard(panel: HTMLElement, findings: IngredientFindin
   }
 
   const note = document.createElement('p');
-  note.textContent = 'Semnalare informativă — verifică întotdeauna eticheta produsului.';
+  note.textContent = 'Semnalare informativă - verifică întotdeauna eticheta produsului.';
   note.style.cssText = 'margin: 12px 0 0; font-size: 12px; color: #496354;';
 
   card.append(note);
